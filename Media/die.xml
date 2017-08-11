@@ -1,0 +1,9 @@
+<!DOCTYPE SpriteDecomposer>
+<sprites image="fang.png" transparentColor="">
+ <animation title="die" delay="200">
+  <cut w="24" x="5" y="1198" h="42" row="1" col="1"/>
+  <cut w="37" x="43" y="1199" h="40" row="1" col="1"/>
+  <cut w="28" x="97" y="1198" h="32" row="1" col="1"/>
+  <cut w="59" x="274" y="1203" h="16" row="1" col="1"/>
+ </animation>
+</sprites>

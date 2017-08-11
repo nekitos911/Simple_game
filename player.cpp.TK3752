@@ -1,0 +1,154 @@
+#include "player.h"
+#include <iostream>
+
+
+Player::Player(AnimationManager &l_anim,Level &level,b2World &world)
+{
+    m_view.reset(FloatRect(0, 0, 640, 480));
+    onGround = 0;
+    m_anim = l_anim;
+    level.LoadFromFile("Media/Level1.tmx");
+    player = level.GetObject("player");
+    ground = level.GetObjects("solid");
+    m_state = STATE::stay;
+    x = player.rect.left;
+    y = player.rect.top;
+    for (int i = 0;i < ground.size();i ++)
+    SetGround(world,ground[i].rect.left,ground[i].rect.top,ground[i].rect.width,ground[i].rect.height);
+    DrawPlayer(world,player.rect.left,player.rect.top,m_anim.getH(),m_anim.getW());
+//   / Box2D();
+}
+
+void Player::KeyCheck() {
+    ////////////////////////////Проверка на нажатие/////////////////////////////
+    if (key["L"]) {
+        m_state = STATE::walk;
+        m_anim.Flip(true);
+    }
+    if(key["R"]) {
+       m_state = STATE::walk;
+        m_anim.Flip(false);
+    }
+    if (key["X"]) {
+        m_state = STATE::jump;
+    }
+    ///////////////////////////Если клавиша отпущена///////////////////////////
+    if(!(key["L"] || key["R"]))
+        if(m_state == STATE::walk) m_state = STATE::stay;
+    if(!key["X"])
+        if(m_state == STATE::jump && onGround) m_state = STATE::stay;
+}
+
+void Player::HandleInput() {
+    b2Vec2 vel = playerBody->GetLinearVelocity();
+    if(key["R"]) {
+        if (vel.x < 2)
+        playerBody->ApplyForceToCenter (b2Vec2(10.0f, 0.0f),1);
+    }
+    if (key["L"]) {
+        if (vel.x > -2)
+        playerBody->ApplyForceToCenter(b2Vec2(-10.0f, 0.0f),1);
+    }
+    if (key["X"]) {
+        if(onGround)
+        playerBody->ApplyForceToCenter(b2Vec2(0.0f, -500.0f),1);
+    }
+}
+
+void Player::Update(float time,b2World &world) {
+    Collision(world);
+    KeyCheck();
+    SetAnim();
+    HandleInput();
+    m_anim.Tick(time);
+    SetView();
+    b2Vec2 pos = playerBody->GetPosition();
+    x = pos.x * SCALE;
+    y = pos.y * SCALE;
+
+    key["R"] = key["L"] = key["X"] = false;
+
+}
+
+void Player::SetAnim() {
+    switch (m_state) {
+    case STATE::stay:
+        if(onGround)
+        m_anim.Set("stay");
+        break;
+    case STATE::walk:
+        if(onGround)
+        m_anim.Set("walk");
+        break;
+    case STATE::jump:
+        if(onGround)
+        m_anim.Set("jump");
+        break;
+    }
+}
+
+void Player::Draw(RenderWindow &window) {
+    //std::cout << x << std::endl;
+    m_anim.Draw(window,x,y);
+}
+
+void Player::SetGround(b2World &world,int x,int y,int w,int h) {
+    b2PolygonShape gr;
+    gr.SetAsBox(w / SCALE,0);
+
+    b2BodyDef bdef;
+    bdef.position.Set(x / SCALE ,y / SCALE);
+    bdef.type = b2_staticBody;
+
+    b2Body *b_ground = world.CreateBody(&bdef);
+    b_ground->CreateFixture(&gr,1.0f);
+}
+
+void Player::DrawPlayer(b2World &world,int x, int y, int w, int h) {
+    b2BodyDef bdef;
+    bdef.type = b2_dynamicBody;
+
+    bdef.position.Set(2 ,2 );
+
+    bdef.fixedRotation = true;
+
+    b2PolygonShape shape;
+    shape.SetAsBox(w / (2 * SCALE),h / (2 * SCALE));
+
+    playerBody = world.CreateBody(&bdef);
+    b2FixtureDef fixtureDef;
+        fixtureDef.shape = &shape;
+        fixtureDef.density = 1.0f; fixtureDef.friction = 0.3f;
+        playerBody->CreateFixture(&fixtureDef);;
+}
+
+void Player::Collision(b2World &world) {
+    onGround = false;
+    b2Vec2 pos = playerBody->GetPosition();
+    pos.y+=20 / SCALE;
+    int i = 10;
+    for (int j = 0;j < ground.size();j++) {
+        if(y + 18 == ground[j].rect.top && (x  > ground[j].rect.left && x < ground[j].rect.width + ground[j].rect.left)) {
+            i = j;
+            if(i != 10)
+            break;
+            else continue;
+        }
+    }
+    if(i == 10) return;
+    std::cout << "i = " << i <<std::endl;
+    std::cout << "y + 18 = " << y + 18 <<std::endl;
+    std::cout << "x = " << x <<std::endl;
+    std::cout << "ground y = " << ground[0].rect.width + ground[0].rect.left <<std::endl;
+    std::cout << "ground x = " << ground[0].rect.left <<std::endl;
+    if(pos.y > ground[i].rect.top / SCALE) onGround = true;
+}
+
+void Player::SetView() {
+    float tempX = x; float tempY = y;
+
+    //if (x < 320) tempX = 320;
+    //tempY = 240;
+
+    m_view.setCenter(tempX,tempY);
+}

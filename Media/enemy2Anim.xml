@@ -1,0 +1,23 @@
+<!DOCTYPE SpriteDecomposer>
+<sprites image="enemy2.png" transparentColor="FFFFFF">
+ <animation title="shootUp" delay="600">
+  <cut w="39" x="345" y="172" h="64" row="1" col="1"/>
+  <cut w="39" x="304" y="172" h="64" row="1" col="1"/>
+ </animation>
+ <animation title="walk" delay="250">
+  <cut w="22" x="358" y="62" h="47" row="1" col="1"/>
+  <cut w="27" x="326" y="61" h="46" row="1" col="1"/>
+  <cut w="38" x="281" y="60" h="45" row="1" col="1"/>
+  <cut w="26" x="247" y="60" h="46" row="1" col="1"/>
+  <cut w="28" x="210" y="60" h="47" row="1" col="1"/>
+  <cut w="40" x="165" y="60" h="46" row="1" col="1"/>
+ </animation>
+ <animation title="shoot" delay="600">
+  <cut w="43" x="4" y="5" h="47" row="1" col="1"/>
+  <cut w="43" x="141" y="3" h="47" row="1" col="1"/>
+ </animation>
+ <animation title="shootDown" delay="600">
+  <cut w="35" x="348" y="243" h="48" row="1" col="1"/>
+  <cut w="35" x="312" y="243" h="48" row="1" col="1"/>
+ </animation>
+</sprites>

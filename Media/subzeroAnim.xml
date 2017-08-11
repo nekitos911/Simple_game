@@ -1,0 +1,38 @@
+<!DOCTYPE SpriteDecomposer>
+<sprites image="subzero.png" transparentColor="29573E">
+ <animation title="walk" delay="250">
+  <cut w="38" x="431" y="131" h="99" row="1" col="1"/>
+  <cut w="43" x="476" y="134" h="96" row="1" col="1"/>
+  <cut w="33" x="534" y="136" h="94" row="1" col="1"/>
+  <cut w="39" x="582" y="134" h="97" row="1" col="1"/>
+  <cut w="44" x="632" y="132" h="100" row="1" col="1"/>
+  <cut w="31" x="692" y="133" h="97" row="1" col="1"/>
+ </animation>
+ <animation title="stay" delay="250">
+  <cut w="38" x="19" y="15" h="97" row="1" col="1"/>
+  <cut w="37" x="65" y="15" h="97" row="1" col="1"/>
+  <cut w="38" x="111" y="15" h="97" row="1" col="1"/>
+  <cut w="39" x="159" y="15" h="97" row="1" col="1"/>
+  <cut w="38" x="213" y="15" h="97" row="1" col="1"/>
+ </animation>
+ <animation title="jump" delay="250">
+  <cut w="36" x="243" y="408" h="81" row="1" col="1"/>
+  <cut w="46" x="301" y="407" h="94" row="1" col="1"/>
+  <cut w="33" x="356" y="407" h="54" row="1" col="1"/>
+  <cut w="44" x="450" y="409" h="42" row="1" col="1"/>
+  <cut w="31" x="502" y="398" h="56" row="1" col="1"/>
+  <cut w="33" x="544" y="398" h="55" row="1" col="1"/>
+  <cut w="44" x="588" y="407" h="39" row="1" col="1"/>
+  <cut w="45" x="643" y="405" h="41" row="1" col="1"/>
+  <cut w="44" x="400" y="411" h="39" row="1" col="1"/>
+ </animation>
+ <animation title="shoot" delay="250">
+  <cut w="56" x="14" y="2054" h="87" row="1" col="1"/>
+  <cut w="57" x="81" y="2063" h="78" row="1" col="1"/>
+ </animation>
+ <animation title="duck" delay="150">
+  <cut w="36" x="20" y="416" h="81" row="1" col="1"/>
+  <cut w="38" x="68" y="443" h="54" row="1" col="1"/>
+  <cut w="36" x="125" y="443" h="54" row="1" col="1"/>
+ </animation>
+</sprites>
