@@ -2,7 +2,7 @@
 
 Loading::Loading() {}
 
-Loading::Loading(int X,int Y,const wchar_t *loading_object1,const std::string loading_object2)
+Loading::Loading(float X,float Y,const wchar_t *loading_object1,const std::string loading_object2)
 {
     x = X;
     y = Y;
@@ -46,6 +46,5 @@ void Loading::Draw(RenderWindow &window) {
         window.draw(m_sprite);
         window.draw(l_content);
     }
-   // std::cout << m_content[0].getPosition().x << std::endl;
     window.display();
 }

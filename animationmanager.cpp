@@ -5,7 +5,7 @@ using namespace tinyxml2;
 AnimationManager::AnimationManager() {}
 AnimationManager::~AnimationManager() { m_animList.clear(); }
 
-void AnimationManager::Create(std::string l_name, Image &image, int x, int y, int w, int h, size_t count, float speed, int step) {
+void AnimationManager::Create(std::string l_name, Image &image, float x, float y, float w, float h, size_t count, float speed, int step) {
     Animation anim;
     anim.m_flip = false;
     anim.m_speed = speed;
@@ -48,7 +48,7 @@ void AnimationManager::Flip() {
         m_animList[animName[i]].IsFlip();
 }
 
-void AnimationManager::Draw(RenderWindow &window, int x, int y) {
+void AnimationManager::Draw(RenderWindow &window, float x, float y) {
     m_animList[m_currentAnim].m_sprite.setPosition(x,y);
     window.draw(m_animList[m_currentAnim].m_sprite);
 }
@@ -84,10 +84,10 @@ void AnimationManager::LoadFromXML(std::string fileName,Image &img)
         cut = animElement->FirstChildElement("cut");
         while (cut)
         {
-            int x = atoi(cut->Attribute("x"));
-            int y = atoi(cut->Attribute("y"));
-            int w = atoi(cut->Attribute("w"));
-            int h = atoi(cut->Attribute("h"));
+            float x = atoi(cut->Attribute("x"));
+            float y = atoi(cut->Attribute("y"));
+            float w = atoi(cut->Attribute("w"));
+            float h = atoi(cut->Attribute("h"));
 
             anim.m_frames.push_back( IntRect(x,y,w,h) );
             anim.m_frames_flip.push_back( IntRect(x + w,y,-w,h)  );

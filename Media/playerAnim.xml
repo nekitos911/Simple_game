@@ -28,10 +28,10 @@
   <cut w="50" x="198" y="901" h="46" row="1" col="1"/>
  </animation>
  <animation title="shoot" delay="200">
-  <cut w="36" x="3" y="575" h="47" row="1" col="1"/>
-  <cut w="39" x="46" y="575" h="47" row="1" col="1"/>
-  <cut w="42" x="90" y="575" h="47" row="1" col="1"/>
-  <cut w="44" x="137" y="575" h="47" row="1" col="1"/>
+  <cut w="43" x="3" y="575" h="47" row="1" col="1"/>
+  <cut w="43" x="46" y="575" h="47" row="1" col="1"/>
+  <cut w="43" x="90" y="575" h="47" row="1" col="1"/>
+  <cut w="43" x="137" y="575" h="47" row="1" col="1"/>
  </animation>
  <animation title="jumpAndShoot" delay="200">
   <cut w="30" x="4" y="1021" h="24" row="1" col="1"/>
@@ -40,13 +40,11 @@
   <cut w="28" x="120" y="1017" h="30" row="1" col="1"/>
  </animation>
  <animation title="duck" delay="200">
-  <cut w="59" x="7" y="438" h="18" row="1" col="1"/>
+  <cut w="67" x="7" y="438" h="18" row="1" col="1"/>
  </animation>
- <animation title="duckAndShoot" delay="200">
-  <cut w="62" x="3" y="720" h="18" row="1" col="1"/>
-  <cut w="65" x="70" y="721" h="18" row="1" col="1"/>
-  <cut w="67" x="141" y="723" h="18" row="1" col="1"/>
-  <cut w="67" x="215" y="725" h="18" row="1" col="1"/>
+ <animation title="duckAndShoot" delay="250">
+  <cut w="67" x="3" y="720" h="22" row="1" col="1"/>
+  <cut w="67" x="70" y="720" h="22" row="1" col="1"/>
  </animation>
  <animation title="die1" delay="200">
   <cut w="24" x="5" y="1198" h="42" row="1" col="1"/>
@@ -54,5 +52,55 @@
  </animation>
  <animation title="die" delay="200">
   <cut w="59" x="274" y="1203" h="16" row="1" col="1"/>
+ </animation>
+ <animation title="shootDown" delay="200">
+  <cut w="35" x="308" y="469" h="50" row="1" col="1"/>
+  <cut w="35" x="383" y="469" h="50" row="1" col="1"/>
+  <cut w="35" x="419" y="469" h="50" row="1" col="1"/>
+  <cut w="35" x="457" y="469" h="50" row="1" col="1"/>
+ </animation>
+<animation title="shootUp" delay="200">
+
+  <cut w="37" x="406" y="371" h="75" row="1" col="1"/>
+  <cut w="37" x="363" y="371" h="75" row="1" col="1"/>
+  <cut w="37" x="487" y="371" h="75" row="1" col="1"/>
+ </animation>
+ <animation title="lookUp" delay="200">
+  <cut w="31" x="278" y="377" h="62" row="1" col="1"/>
+ </animation>
+ <animation title="lookDown" delay="200">
+  <cut w="29" x="275" y="469" h="50" row="1" col="1"/>
+ </animation>
+ <animation title="lookDownAndWalk" delay="200">
+  <cut w="24" x="4" y="468" h="49" row="1" col="1"/>
+  <cut w="30" x="35" y="468" h="48" row="1" col="1"/>
+  <cut w="29" x="72" y="469" h="48" row="1" col="1"/>
+  <cut w="25" x="110" y="468" h="48" row="1" col="1"/>
+  <cut w="31" x="139" y="468" h="48" row="1" col="1"/>
+  <cut w="35" x="174" y="468" h="48" row="1" col="1"/>
+ </animation>
+ <animation title="lookUpAndWalk" delay="200">
+  <cut w="26" x="6" y="371" h="54" row="1" col="1"/>
+  <cut w="32" x="40" y="372" h="54" row="1" col="1"/>
+  <cut w="31" x="84" y="375" h="53" row="1" col="1"/>
+  <cut w="27" x="128" y="375" h="54" row="1" col="1"/>
+  <cut w="33" x="163" y="375" h="54" row="1" col="1"/>
+  <cut w="37" x="205" y="377" h="53" row="1" col="1"/>
+ </animation>
+ <animation title="lookUpShootAndWalk" delay="200">
+  <cut w="29" x="6" y="825" h="75" row="1" col="1"/>
+  <cut w="40" x="40" y="825" h="75" row="1" col="1"/>
+  <cut w="37" x="84" y="825" h="75" row="1" col="1"/>
+  <cut w="31" x="128" y="825" h="75" row="1" col="1"/>
+  <cut w="41" x="163" y="825" h="75" row="1" col="1"/>
+  <cut w="41" x="205" y="825" h="75" row="1" col="1"/>
+ </animation>
+ <animation title="lookDownShootAndWalk" delay="200">
+  <cut w="26" x="6" y="956" h="48" row="1" col="1"/>
+  <cut w="36" x="37" y="957" h="47" row="1" col="1"/>
+  <cut w="32" x="76" y="957" h="47" row="1" col="1"/>
+  <cut w="30" x="116" y="956" h="48" row="1" col="1"/>
+  <cut w="38" x="148" y="956" h="48" row="1" col="1"/>
+  <cut w="41" x="187" y="957" h="47" row="1" col="1"/>
  </animation>
 </sprites>

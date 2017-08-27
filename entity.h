@@ -10,7 +10,7 @@ using namespace sf;
 class Entity
 {
 public:
-    Entity(std::string l_name,AnimationManager &l_anim,int X, int Y,bool Dir);
+    Entity(std::string l_name,AnimationManager &l_anim,float X, float Y,bool Dir);
 
     bool IsLife(); // Check for life
     void Die(); // If died
@@ -20,21 +20,26 @@ public:
 
     void Draw(RenderWindow &window); // Draw entities
 
-    void SetPlayerCoords(int l_playerX,int l_playerY); // Get player coords
+    void SetPlayerCoords(float l_playerX,float l_playerY,float l_playerW,float l_playerH); // Get player coords
+    float GetTimer();
 
     bool IsShoot();
+    std::string GetState();
 
-    IntRect GetRect();
-    IntRect GetBodyRect();
+    FloatRect GetRect();
+    FloatRect GetBodyRect();
 protected:
-    int x,y,w,h;
-    int playerX,playerY;
+    Clock clock;
+    float x,y,w,h;
+    float playerX,playerY,playerW,playerH;
     AnimationManager m_anim;
     Texture texture;
     bool isLife,dir;
     float m_speed,timer;
     std::vector<Object> objects;
     std::string m_name;
+    std::string m_state;
+    std::string m_boss;
 };
 
 

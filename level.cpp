@@ -51,11 +51,11 @@ bool Level::LoadFromFile(std::string filename) {
     int columns = tilesetImage.getSize().x / tileW;
     int rows = tilesetImage.getSize().y / tileH;
 
-    std::vector<sf::Rect<int> > subRects;
+    std::vector<sf::Rect<float> > subRects;
 
     for(int y = 0;y < rows;y++)
         for (int x = 0;x < columns;x++) {
-            sf::Rect<int> rect;
+            sf::Rect<float> rect;
 
             rect.top = y * tileH;
             rect.height = tileH;
@@ -100,7 +100,7 @@ bool Level::LoadFromFile(std::string filename) {
             if(subRectToUse >= 0) {
                 sf::Sprite sprite;
                 sprite.setTexture(tilesetImage);
-                sprite.setTextureRect(subRects[subRectToUse]);
+                sprite.setTextureRect((IntRect)subRects[subRectToUse]);
                 sprite.setPosition(x * tileW,y * tileH);
                 sprite.setColor(sf::Color(255,255,255,layer.opacity));
 
@@ -138,10 +138,10 @@ bool Level::LoadFromFile(std::string filename) {
                 if(objectElement->Attribute("name") != NULL)
                     objectName = objectElement->Attribute("name");
 
-                int x = atoi(objectElement->Attribute("x"));
-                int y = atoi(objectElement->Attribute("y"));
-                int w;
-                int h;
+                float x = atoi(objectElement->Attribute("x"));
+                float y = atoi(objectElement->Attribute("y"));
+                float w;
+                float h;
                 sf::Sprite sprite;
                 sprite.setTexture(tilesetImage);
                 sprite.setTextureRect(sf::Rect<int>(0,0,0,0));
@@ -154,13 +154,13 @@ bool Level::LoadFromFile(std::string filename) {
                 else {
                     w = subRects[atoi(objectElement->Attribute("gid")) - firstTileID].width;
                     h = subRects[atoi(objectElement->Attribute("gid")) - firstTileID].height;
-                    sprite.setTextureRect(subRects[atoi(objectElement->Attribute("gid")) - firstTileID]);
+                    sprite.setTextureRect((IntRect)subRects[atoi(objectElement->Attribute("gid")) - firstTileID]);
                 }
                 Object object;
                 object.name = objectName;
                 object.type = objectType;
                 object.sprite = sprite;
-                sf::Rect <int> objectRect;
+                sf::Rect <float> objectRect;
                 objectRect.top = y;
                 objectRect.left = x;
                 objectRect.height = h;
@@ -221,5 +221,5 @@ void Level::Draw(sf::RenderWindow &window) {
             window.draw(layers[layer].tiles[tile]);
 }
 
-int Level::GetMapW() { return tileW * w; }
-int Level::GetMapH() { return tileH * h; }
+float Level::GetMapW() { return tileW * w; }
+float Level::GetMapH() { return tileH * h; }

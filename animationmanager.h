@@ -11,7 +11,7 @@ public:
     ~AnimationManager();
 
     // Create simple animation
-    void Create(std::string l_name,Image &image,int x,int y,int w,int h,size_t count,float speed,int step = 0);
+    void Create(std::string l_name,Image &image,float x,float y,float w,float h,size_t count,float speed,int step = 0);
     void Set(std::string l_name); // Set animation
     void LoadFromXML(std::string fileName,Image &img); // Load animations from Xml
 
@@ -25,7 +25,7 @@ public:
 
     std::string GetName(); // Get name of current animation
     void SetName(std::string l_name); // Set curren animation's name
-    void Draw(RenderWindow &window,int x = 0,int y = 0); // Draw animations
+    void Draw(RenderWindow &window,float x = 0,float y = 0); // Draw animations
 private:
     std::string m_currentAnim;
     std::map<std::string,Animation> m_animList;

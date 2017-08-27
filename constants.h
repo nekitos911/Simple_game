@@ -5,10 +5,12 @@
 #include <Box2D/Common/b2Math.h>
 #include <Box2D/Dynamics/b2Body.h>
 #include "SFML/Graphics.hpp"
+#include "SFML/Audio.hpp"
 #include "lib/tinyxml2.h"
 #include <iostream>
 #include <list>
 #include <vector>
+using namespace sf;
 
 const float SCALE = 30.0f; // metres to coordinates
 const short COLLISION_BREAK = -1; // Num for check player onGround
@@ -29,4 +31,5 @@ const uint16 ENEMY_CATEGORY = 0x0001;
 const uint16 ENEMY_MASK = 0x0002;
 const short CONTENT_SIZE = 16;
 const short LOADING_CONTENT_SIZE = 30;
+const short PLAYER_LIFE = 3;
 #endif // CONSTANTS_H

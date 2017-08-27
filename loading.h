@@ -9,13 +9,13 @@ class Loading
 {
 public:
     Loading();
-    Loading(int x,int y,const wchar_t *loading_object1,const std::string loading_object2);
+    Loading(float x,float y,const wchar_t *loading_object1,const std::string loading_object2);
 
     void Draw(RenderWindow &window);
     void GetImage(Image &image,std::string string,bool drawSprite);
 
 private:
-    int mapW;
+    float mapW;
     RectangleShape m_backdrop;
     Font m_font;
     Text m_content[2];
@@ -24,7 +24,7 @@ private:
     Texture m_texture;
     bool isDrawSprite;
     FloatRect rect;
-    int x,y;
+    float x,y;
 };
 
 #endif // LOADING_H

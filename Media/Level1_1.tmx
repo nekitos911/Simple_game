@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="100" height="23" tilewidth="32" tileheight="32" nextobjectid="69">
+<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="100" height="23" tilewidth="32" tileheight="32" nextobjectid="118">
  <tileset firstgid="1" name="Contra-Stage1-Jungle(Unmarked)" tilewidth="32" tileheight="32" tilecount="728" columns="104">
-  <image source="C:/Users/Дмитрий/Desktop/Новая папка (3)/Contra-Stage1-Jungle(Unmarked).png" width="3328" height="224"/>
+  <image source="Media/Images/level1.png" width="3328" height="224"/>
  </tileset>
  <layer name="water" width="100" height="23">
   <data>
@@ -6919,7 +6919,68 @@
   <object id="1" name="block" x="0" y="0" width="72" height="604.348"/>
   <object id="38" name="block" x="3169.33" y="190" width="30" height="447.333"/>
   <object id="65" name="player" x="182.667" y="278.333" width="48" height="79"/>
-  <object id="66" name="solid" x="126.667" y="360" width="863" height="23"/>
+  <object id="66" name="solid" x="126.667" y="360" width="430" height="23"/>
   <object id="67" name="enemy" x="500.667" y="342" width="44" height="80"/>
+  <object id="69" name="solid" x="413.667" y="328.333" width="16" height="31"/>
+  <object id="70" name="solid" x="639.667" y="326.333" width="64" height="36"/>
+  <object id="71" name="solid" x="446.667" y="423.333" width="208" height="24"/>
+  <object id="72" name="solid" x="1055.67" y="326.333" width="64" height="25"/>
+  <object id="73" name="solid" x="1181.67" y="359.333" width="32" height="24"/>
+  <object id="74" name="solid" x="764.667" y="358.333" width="112" height="29"/>
+  <object id="75" name="solid" x="1244.67" y="392.333" width="64" height="28"/>
+  <object id="76" name="solid" x="1374.67" y="391.333" width="272" height="22"/>
+  <object id="77" name="solid" x="1887.67" y="486.333" width="46" height="17"/>
+  <object id="78" name="solid" x="1981.67" y="438.333" width="33" height="18"/>
+  <object id="79" name="solid" x="1853.67" y="357.333" width="129" height="19"/>
+  <object id="80" name="solid" x="2077.67" y="392.333" width="113" height="15"/>
+  <object id="81" name="solid" x="2110.67" y="488.333" width="16" height="17"/>
+  <object id="82" name="solid" x="2141.67" y="454.333" width="32" height="20"/>
+  <object id="83" name="solid" x="862.667" y="487.333" width="32" height="17"/>
+  <object id="84" name="solid" x="2237.67" y="455.333" width="16" height="15"/>
+  <object id="85" name="solid" x="2270.67" y="438.333" width="16" height="17"/>
+  <object id="86" name="solid" x="2269.67" y="358.333" width="80" height="19"/>
+  <object id="87" name="solid" x="2334.67" y="438.333" width="16" height="19"/>
+  <object id="88" name="solid" x="2398.67" y="423.333" width="64" height="16"/>
+  <object id="89" name="solid" x="2461.67" y="391.333" width="16" height="15"/>
+  <object id="90" name="solid" x="2495.67" y="456.333" width="48" height="14"/>
+  <object id="91" name="solid" x="2590.67" y="391.333" width="32" height="17"/>
+  <object id="92" name="solid" x="2622.67" y="358.333" width="32" height="15"/>
+  <object id="93" name="solid" x="2621.67" y="487.333" width="16" height="16"/>
+  <object id="94" name="solid" x="2654.67" y="437.333" width="16" height="17"/>
+  <object id="95" name="solid" x="2717.67" y="392.333" width="32" height="15"/>
+  <object id="96" name="solid" x="2750.67" y="423.333" width="80" height="15"/>
+  <object id="97" name="solid" x="2845.67" y="487.333" width="48" height="16"/>
+  <object id="98" name="solid" x="2973.67" y="455.333" width="32" height="15"/>
+  <object id="99" name="solid" x="3070.67" y="423.333" width="32" height="16"/>
+  <object id="100" name="water" x="127.667" y="505.333" width="318" height="230"/>
+  <object id="101" name="water" x="445.667" y="518.333" width="514" height="217"/>
+  <object id="102" name="water" x="987.667" y="478.333" width="68" height="255"/>
+  <object id="103" name="water" x="957.667" y="506.333" width="29" height="229"/>
+  <object id="104" name="water" x="1055.67" y="536.333" width="193" height="199"/>
+  <object id="105" name="water" x="1243.67" y="476.333" width="131" height="261"/>
+  <object id="106" name="water" x="1375.67" y="504.333" width="350" height="231"/>
+  <object id="107" name="water" x="1727.67" y="510.333" width="384" height="226"/>
+  <object id="108" name="water" x="2110.67" y="531.333" width="1097" height="206"/>
+  <object id="109" name="enemy" x="864.667" y="469" width="58" height="92">
+   <properties>
+    <property name="state" value="stay"/>
+   </properties>
+  </object>
+  <object id="110" name="enemy" x="1643.67" y="373" width="93" height="133"/>
+  <object id="111" name="wall" x="1370.67" y="259.333" width="16" height="127"/>
+  <object id="112" name="wall" x="1796.67" y="269.333" width="16" height="122"/>
+  <object id="113" name="enemy" x="1909.67" y="468" width="53" height="98">
+   <properties>
+    <property name="state" value="stay"/>
+   </properties>
+  </object>
+  <object id="114" name="wall" x="2073.67" y="285.333" width="16" height="105"/>
+  <object id="115" name="wall" x="2279.67" y="272.333" width="16" height="120"/>
+  <object id="116" name="enemy" x="2163.67" y="374" width="64" height="121"/>
+  <object id="117" name="enemy" x="2878.67" y="469" width="57" height="108">
+   <properties>
+    <property name="state" value="stay"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

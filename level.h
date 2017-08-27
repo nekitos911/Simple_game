@@ -8,7 +8,7 @@ struct Object {
     std::string GetPropertyString(std::string name);
     std::string name;
     std::string type;
-    sf::Rect<int> rect;
+    sf::Rect<float> rect;
     std::map<std::string,std::string> properties;
 
     sf::Sprite sprite;
@@ -25,15 +25,15 @@ public:
     Level();
     bool LoadFromFile(std::string filename);
     Object GetObject(std::string name);
-    int GetMapW();
-    int GetMapH();
+    float GetMapW();
+    float GetMapH();
     std::vector<Object> GetObjects(std::string name);
     std::vector<Object> GetAllObjects();
 
     void Draw(sf::RenderWindow &window);
     sf::Vector2i GetTileSize();
 private:
-    int w,h,tileW,tileH;
+    float w,h,tileW,tileH;
     int firstTileID;
     sf::Rect<float> drawingBounds;
     sf::Texture tilesetImage;

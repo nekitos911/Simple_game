@@ -1,7 +1,8 @@
 #include "statusbar.h"
 
-StatusBar::StatusBar(Image &image,int l_mapW) {
+StatusBar::StatusBar(Image &image,float l_mapW,float l_mapH) {
     mapW = l_mapW;
+    mapH = l_mapH;
     m_font.loadFromFile("Media/arial.ttf");
     for (int i = 0;i < 2;i++) {
         m_content[i].setFont(m_font);
@@ -13,7 +14,7 @@ StatusBar::StatusBar(Image &image,int l_mapW) {
     m_sprite.setTexture(m_texture);
 }
 
-void StatusBar::Draw(RenderWindow &window,int x) {
+void StatusBar::Draw(RenderWindow &window,float x,float y) {
     if (x <= VIEW_WIDTH / 2 - OFFSET_X) {
         x = 0.5 * OFFSET_X;
     }
@@ -26,9 +27,14 @@ void StatusBar::Draw(RenderWindow &window,int x) {
         for(int i = 0; i < 2;i++)
         m_content[i].setPosition(x + CONTENT_OFFSET_X,STATUSBAR_POSITION_Y + CONTENT_OFFSET_Y);
     }
-    m_sprite.setPosition(x,STATUSBAR_POSITION_Y);
+    if(y <= VIEW_HEIGHT / 2) y = STATUSBAR_POSITION_Y;
+    else if (y > VIEW_HEIGHT / 2 && y < mapH - VIEW_HEIGHT / 2)
+        y += STATUSBAR_POSITION_Y - VIEW_HEIGHT / 2;
+    else if (y >= mapH - VIEW_HEIGHT / 2)
+        y = STATUSBAR_POSITION_Y + mapH - VIEW_HEIGHT;
+    m_sprite.setPosition(x,y);
     for(int i = 0; i < 2;i++) {
-        m_content[i].setPosition(x + CONTENT_OFFSET_X + i * 100,STATUSBAR_POSITION_Y + CONTENT_OFFSET_Y);
+        m_content[i].setPosition(x + CONTENT_OFFSET_X + i * 100,y + CONTENT_OFFSET_Y);
         window.draw(m_content[i]);
     }
     window.draw(m_sprite);

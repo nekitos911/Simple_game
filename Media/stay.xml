@@ -1,0 +1,8 @@
+<!DOCTYPE SpriteDecomposer>
+<sprites image="enemy2.png" transparentColor="FFFFFF">
+ <animation title="stay" delay="300">
+  <cut w="35" x="189" y="2" h="47" row="1" col="1"/>
+  <cut w="37" x="226" y="3" h="46" row="1" col="1"/>
+  <cut w="38" x="267" y="3" h="45" row="1" col="1"/>
+ </animation>
+</sprites>

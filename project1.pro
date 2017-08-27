@@ -20,7 +20,11 @@ SOURCES += main.cpp \
     bullet.cpp \
     enemy.cpp \
     statusbar.cpp \
-    loading.cpp
+    loading.cpp \
+    menu.cpp \
+    gameovermenu.cpp \
+    gamewindow.cpp \
+    mainmenu.cpp
 
 HEADERS += \
     animation.h \
@@ -33,7 +37,11 @@ HEADERS += \
     bullet.h \
     enemy.h \
     statusbar.h \
-    loading.h
+    loading.h \
+    menu.h \
+    gameovermenu.h \
+    gamewindow.h \
+    mainmenu.h
 
 win32: LIBS += -L$$PWD/lib/ -lTinyXML2
 

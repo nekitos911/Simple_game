@@ -8,7 +8,7 @@
 class Bullet : public Entity
 {
 public:
-    Bullet(std::string l_name,AnimationManager &l_anim,Level &level,int X,int Y,bool Dir);
+    Bullet(std::string l_name,AnimationManager &l_anim,Level &level,float X,float Y,bool Dir);
 
     void Update(float &time); // Update bullets
 };

@@ -7,15 +7,15 @@
 class StatusBar
 {
 public:
-    StatusBar(Image &image,int l_mapW);
+    StatusBar(Image &image,float l_mapW,float l_mapH);
 
     void Add(std::string life);
-    void Draw(RenderWindow &window,int x);
+    void Draw(RenderWindow &window,float x,float y);
     void Update(std::string life,std::string score);
     void Clear();
 private:
     std::string m_life;
-    int mapW;
+    float mapW,mapH;
     std::string m_score;
     int m_numVisible;
     RectangleShape m_backdrop;

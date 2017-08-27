@@ -1,0 +1,53 @@
+<!DOCTYPE SpriteDecomposer>
+<sprites image="fang (1) (1) (1).png" transparentColor="">
+ <animation title="shootDown" delay="300">
+  <cut w="35" x="308" y="469" h="48" row="1" col="1"/>
+  <cut w="35" x="383" y="469" h="48" row="1" col="1"/>
+  <cut w="35" x="419" y="469" h="48" row="1" col="1"/>
+  <cut w="35" x="457" y="469" h="48" row="1" col="1"/>
+ </animation>
+ <animation title="lookUp" delay="150">
+  <cut w="31" x="278" y="377" h="54" row="1" col="1"/>
+ </animation>
+ <animation title="lookDown" delay="150">
+  <cut w="31" x="275" y="469" h="54" row="1" col="1"/>
+ </animation>
+ <animation title="lookDownAndWalk" delay="150">
+  <cut w="24" x="4" y="468" h="49" row="1" col="1"/>
+  <cut w="30" x="35" y="468" h="48" row="1" col="1"/>
+  <cut w="29" x="72" y="469" h="48" row="1" col="1"/>
+  <cut w="25" x="110" y="468" h="48" row="1" col="1"/>
+  <cut w="31" x="139" y="468" h="48" row="1" col="1"/>
+  <cut w="35" x="174" y="468" h="48" row="1" col="1"/>
+ </animation>
+ <animation title="lookUpAndWalk" delay="150">
+  <cut w="26" x="6" y="371" h="54" row="1" col="1"/>
+  <cut w="32" x="40" y="372" h="54" row="1" col="1"/>
+  <cut w="31" x="84" y="375" h="53" row="1" col="1"/>
+  <cut w="27" x="128" y="375" h="54" row="1" col="1"/>
+  <cut w="33" x="163" y="375" h="54" row="1" col="1"/>
+  <cut w="37" x="205" y="377" h="53" row="1" col="1"/>
+ </animation>
+ <animation title="lookUpShootAndWalk" delay="150">
+  <cut w="29" x="6" y="832" h="57" row="1" col="1"/>
+  <cut w="40" x="40" y="829" h="61" row="1" col="1"/>
+  <cut w="37" x="84" y="830" h="59" row="1" col="1"/>
+  <cut w="31" x="128" y="835" h="55" row="1" col="1"/>
+  <cut w="41" x="163" y="829" h="61" row="1" col="1"/>
+  <cut w="41" x="205" y="836" h="55" row="1" col="1"/>
+ </animation>
+ <animation title="lookDownShootAndWalk" delay="150">
+  <cut w="26" x="6" y="956" h="48" row="1" col="1"/>
+  <cut w="36" x="37" y="957" h="47" row="1" col="1"/>
+  <cut w="32" x="76" y="957" h="47" row="1" col="1"/>
+  <cut w="30" x="116" y="956" h="48" row="1" col="1"/>
+  <cut w="38" x="148" y="956" h="48" row="1" col="1"/>
+  <cut w="41" x="187" y="957" h="47" row="1" col="1"/>
+ </animation>
+ <animation title="shootUp" delay="150">
+  <cut w="37" x="323" y="369" h="63" row="1" col="1"/>
+  <cut w="37" x="406" y="372" h="60" row="1" col="1"/>
+  <cut w="37" x="363" y="371" h="61" row="1" col="1"/>
+  <cut w="37" x="487" y="371" h="61" row="1" col="1"/>
+ </animation>
+</sprites>

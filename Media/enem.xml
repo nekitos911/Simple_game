@@ -1,0 +1,11 @@
+<!DOCTYPE SpriteDecomposer>
+<sprites image="enemy2.png" transparentColor="FFFFFF">
+ <animation title="shootUp" delay="150">
+  <cut w="39" x="304" y="174" h="62" row="1" col="1"/>
+  <cut w="39" x="345" y="174" h="62" row="1" col="1"/>
+ </animation>
+ <animation title="shootDown" delay="150">
+  <cut w="35" x="312" y="243" h="48" row="1" col="1"/>
+  <cut w="35" x="348" y="243" h="48" row="1" col="1"/>
+ </animation>
+</sprites>
